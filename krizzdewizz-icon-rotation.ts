@@ -1,4 +1,4 @@
- // this code runs in VS Code -> must be AMD module format
+// this code runs in VS Code -> must be AMD module format
 
 import { nativeImage } from 'electron';
 import * as path from 'path';
@@ -12,7 +12,7 @@ function getAllIcons(root: string): string[] {
 		return allIcons;
 	}
 
-	let files;
+	let files: string[];
 	try {
 		files = fs.readdirSync(root);
 	} catch (error) {
@@ -38,7 +38,5 @@ export function nextIcon(appRoot: string): Electron.NativeImage | string {
 		return undefined; // first is original
 	}
 
-	const p = path.join(root, icons[(winNumber - 1) % icons.length]);
-	// krizzdewizz_fs.appendFileSync('d:/x/vscode-log.txt', `onSetIcon: ${p}\n`);
-	return nativeImage.createFromPath(p);
+	return nativeImage.createFromPath(path.join(root, icons[(winNumber - 1) % icons.length]));
 }
