@@ -37,7 +37,7 @@ function patchMain() {
 }
 
 function backupMain() {
-    const backupFile = `${VSCODE_MAIN}.backup.${Date.now()}`;
+    const backupFile = `${VSCODE_MAIN}.backup.krizzdewizz-icon-rotation.${Date.now()}`;
     console.log(`Backup ${VSCODE_MAIN} to ${backupFile}...`);
     copyFile(VSCODE_MAIN, backupFile);
 }
