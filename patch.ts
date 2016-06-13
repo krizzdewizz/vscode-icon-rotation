@@ -3,11 +3,12 @@ import * as path from 'path';
 import * as mkdirp from 'mkdirp';
 import * as glob from 'glob';
 
+const VS_CODE_ROOT = 'C:/Program Files (x86)/Microsoft VS Code/resources/app';
+const VSCODE_MAIN = path.join(VS_CODE_ROOT, 'out/vs/code/electron-main/main.js');
+
 function copyFile(src: string, target: string) {
     fs.writeFileSync(target, fs.readFileSync(src));
 }
-const VS_CODE_ROOT = 'C:/Program Files (x86)/Microsoft VS Code/resources/app';
-const VSCODE_MAIN = path.join(VS_CODE_ROOT, 'out/vs/code/electron-main/main.js');
 
 function copyResources() {
     console.log(`Copy resources...`);
