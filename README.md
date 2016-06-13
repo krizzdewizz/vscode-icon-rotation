@@ -11,7 +11,8 @@ npm run patch
 ```
 
 ## Apply the patch (non-Windows)
-Proceed as described above and replace the `.ico` files with `.png` files.
+
+In `patch.ts`, let VS_CODE_ROOT point to your VS Code installation then proceed as described above and replace the `.ico` files with `.png` files.
 
 To create a nice palette of icons, you may want to run
 
