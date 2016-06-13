@@ -1,7 +1,7 @@
 # vscode-icon-rotation
 Patches an existing VS Code installation so that every new window gets its own colorful icon. Useful when there are lots of VS Code windows open.
 
-![Screenshot](media/screeny.png)
+![Screenshot](media/screeny2.png)
 
 ## Apply the patch (Windows)
 
