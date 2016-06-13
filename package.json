@@ -1,0 +1,21 @@
+{
+  "name": "vscode-icon-rotation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "patch": "tsc -p . & tsc -m amd krizzdewizz-icon-rotation.ts typings/node/node.d.ts typings/electron/electron.d.ts & node patch",
+    "gen-icons": "tsc -p . & node gen-icons"
+  },
+  "dependencies": {
+    "glob": "^7.0.3",
+    "lwip": "0.0.9",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "tslint": "^3.11.0",
+    "typescript": "^1.8.10"
+  }
+}
