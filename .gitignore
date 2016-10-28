@@ -6,3 +6,4 @@ wix/icon-rotation/icon-rotation.sln
 wix/icon-rotation/obj/**
 wix/icon-rotation/bin/**
 installer/*
+install-log.txt
