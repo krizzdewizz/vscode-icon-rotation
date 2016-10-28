@@ -7,3 +7,4 @@ wix/icon-rotation/obj/**
 wix/icon-rotation/bin/**
 installer/*
 install-log.txt
+*.vsix
