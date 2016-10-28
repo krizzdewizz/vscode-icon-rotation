@@ -1,25 +1,34 @@
-# vscode-icon-rotation
-Patches an existing VS Code installation so that every new window gets its own colorful icon. Useful when there are lots of VS Code windows open.
+# vscode-icon-rotation-ahk
+AutoHotkey scripts to start VS Code instances each with an own icon.
 
-![Screenshot](media/screeny2.png)
+![VS Code each with an own icon](doc/screeny.png)
 
-## Apply the patch (Windows)
+## Usage
+* Download and extract the [distribution](https://github.com/krizzdewizz/vscode-icon-rotation-ahk/raw/master/dist/vscode-icon-rotation-ahk/vscode-icon-rotation-ahk-dist.zip) to a folder.
+* Start `on-vscode-set-next-icon.exe` and leave it running in the background. You may want to put a link into the Windows `Startup` folder.
+* Copy an icon to `my-vscode-project\.vscode\vscode.ico`
+* Run `codee my-vscode-project` and the newly created VS Code window should display your icon.
 
-Change to administrator mode when VS Code is installed in `Program Files (x86)`.
+The `icons` folder contains some colorized VS Code icons to be used.
+
+## How it works
+
+`on-vscode-set-next-icon.exe` is a 'deamon' which is notified whenever a new VS Code window is created and replaces the icon of the newly created window with `%temp%\vsciconrot_next.ico`.
+
+`codee.exe` is used to start VS Code, but before, it replaces `%temp%\vsciconrot_next.ico` with an eventually existing `%1\.vscode\vscode.ico` file.
+
+It takes a single parameter; the folder to open in VS Code:
 
 ```
-npm install
-npm run patch
+codee my-vscode-project
 ```
 
-## Apply the patch (non-Windows)
+If there exists a `%1\.vscode\vscode.ico` icon file, it is copied to `%temp%\vsciconrot_next.ico`, which is then picked up by the deamon.
 
-In `patch.ts`, let VS_CODE_ROOT point to your VS Code installation then proceed as described above and replace the `.ico` files with `.png` files.
+You must not necessarily use `codee`. Just make sure that `%temp%\vsciconrot_next.ico` is updated before you start VS Code.
 
-To create a nice palette of icons, you may want to run
+## Build
 
-```
-npm run gen-icons
-```
+Install AutoHotkey from their website.
 
-and copy the resulting pngs from `out` to `<vscode-install-dir>/resources/app/resources/krizzdewizz-icon-rotation`.
+Run `build.cmd` to generate executables from the `ahk`s using `ahk2exe`.

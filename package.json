@@ -1,21 +1,44 @@
 {
   "name": "vscode-icon-rotation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "patch": "tsc -p . & tsc -m amd krizzdewizz-icon-rotation.ts typings/node/node.d.ts typings/electron/electron.d.ts & node patch",
-    "gen-icons": "tsc -p . & node gen-icons"
+  "description": "Start VS Code instances each with an own icon",
+  "version": "0.2.0",
+  "publisher": "krizzdewizz",
+  "engines": {
+    "vscode": "^0.10.1"
   },
-  "dependencies": {
-    "glob": "^7.0.3",
-    "lwip": "0.0.9",
-    "mkdirp": "^0.5.1"
+  "categories": [
+    "Other"
+  ],
+  "bugs": {
+    "url": "https://github.com/krizzdewizz/vscode-icon-rotation/issues"
+  },
+  "homepage": "https://github.com/krizzdewizz/vscode-icon-rotation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krizzdewizz/vscode-icon-rotation.git"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.iconRotationOpenInstallerFolder",
+        "title": "Icon Rotation: Open installer folder"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "copy-installer & node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile --watch -p ./"
   },
   "devDependencies": {
-    "tslint": "^3.11.0",
-    "typescript": "^1.8.10"
+    "typescript": "*",
+    "vscode": "0.10.x",
+    "tslint": "*"
+  },
+  "dependencies": {
+    "openurl": "^1.1.1"
   }
 }

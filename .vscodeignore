@@ -1,0 +1,13 @@
+.vscode/**
+typings/**
+out/test/**
+test/**
+src/**
+**/*.map
+.gitignore
+tsconfig.json
+tslint.json
+ahk/**
+wix/**
+build-exe.cmd
+copy-installer.cmd
