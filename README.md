@@ -1,7 +1,7 @@
 # vscode-icon-rotation
 Start VS Code instances each with an own icon.
 
-![VS Code each with an own icon](doc/screeny.png)
+![VS Code each with an own icon](doc/logo.png)
 
 This extension provides the Installer for the actual Windows program.
 

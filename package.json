@@ -9,6 +9,7 @@
   "categories": [
     "Other"
   ],
+  "icon": "doc/logo.png",
   "bugs": {
     "url": "https://github.com/krizzdewizz/vscode-icon-rotation/issues"
   },
