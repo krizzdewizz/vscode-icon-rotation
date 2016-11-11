@@ -17,7 +17,7 @@
       <Publish Dialog="ExitDialog"
           Control="Finish"
           Event="DoAction"
-          Value="LaunchApplication">NOT Installed</Publish> 
+          Value="LaunchApplication">NOT Installed</Publish>
     </UI>
 
     <Property Id="WixShellExecTarget" Value="[#EXEComponent]" />
@@ -39,9 +39,9 @@
 
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <Component Id="EXEComponent" Guid="93e31524-ea13-409c-b44a-f2117e97f6a7">
-        <File Id="EXEComponent" Source="..\..\ahk\on-vscode-set-next-icon.exe" KeyPath="yes" Checksum="yes"/>
+        <File Id="EXEComponent" Source="..\..\ahk\vscode-icon-rotation.exe" KeyPath="yes" Checksum="yes"/>
       </Component>
-      
+
       <Component Id="ProductComponent" Guid="93e31524-ea13-409c-b44a-f2117e97f6a6">
         <File Source="..\..\ahk\codee.exe"/>
         <File Source="..\..\LICENSE"/>
@@ -57,10 +57,10 @@
 
         <Shortcut Id="StartupShortcut"
           Directory="StartupFolder"
-          Name="on-vscode-set-next-icon"
-          Description="on-vscode-set-next-icon"
+          Name="vscode-icon-rotation"
+          Description="vscode-icon-rotation"
           WorkingDirectory="INSTALLFOLDER"
-          Target="[INSTALLFOLDER]on-vscode-set-next-icon.exe" />
+          Target="[INSTALLFOLDER]vscode-icon-rotation.exe" />
 
         <RegistryValue Root="HKCU"
                 Key="Software\SoftwareArchitects\vscode-icon-rotation"

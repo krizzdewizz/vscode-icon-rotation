@@ -11,3 +11,5 @@ ahk/**
 wix/**
 build-exe.cmd
 copy-installer.cmd
+install-log.txt
+install-with-log.cmd
