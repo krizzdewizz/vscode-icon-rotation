@@ -18,6 +18,8 @@ The Installer creates a shortcut to the 'deamon' in the common startup folder an
 * Copy an icon to `my-vscode-project\.vscode\vscode.ico`
 * Run `codee my-vscode-project` and the newly created VS Code window should display your icon.
 
+Note `codee` instead of `code`.
+
 The `%USERPROFILE%\.vscode\extensions\krizzdewizz.vscode-icon-rotation-1.0.0\icons` folder contains some colorized VS Code icons to be used.
 
 ## How it works
