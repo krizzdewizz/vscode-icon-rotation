@@ -21,7 +21,6 @@ The Installer creates a shortcut to the 'deamon' in the common startup folder an
 The `%USERPROFILE%\.vscode\extensions\krizzdewizz.vscode-icon-rotation-1.0.0\icons` folder contains some colorized VS Code icons to be used.
 
 ## How it works
-
 `vscode-icon-rotation.exe` is a 'deamon' which is notified whenever a new VS Code window is created and replaces the icon of the newly created window with `%temp%\vsciconrot_next.ico`.
 
 `codee.exe` is used to start VS Code, but before, it replaces `%temp%\vsciconrot_next.ico` with an eventually existing `my-vscode-project\.vscode\vscode.ico` file.
@@ -35,6 +34,8 @@ codee my-vscode-project
 If there exists a `%1\.vscode\vscode.ico` icon file, it is copied to `%temp%\vsciconrot_next.ico`, which is then picked up by the deamon.
 
 You must not necessarily use `codee`. Just make sure that `%temp%\vsciconrot_next.ico` is updated before you start VS Code.
+
+The common startup folder can be opened by running `shell:common startup`.
 
 ## Release Info
 
