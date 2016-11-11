@@ -36,6 +36,11 @@ If there exists a `%1\.vscode\vscode.ico` icon file, it is copied to `%temp%\vsc
 
 You must not necessarily use `codee`. Just make sure that `%temp%\vsciconrot_next.ico` is updated before you start VS Code.
 
+## Release Info
+
+v1.0.0
+- Initial release
+
 ## Build
 
 - install AutoHotkey from their website.
