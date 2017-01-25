@@ -29,6 +29,7 @@ WINEVENT(sEvent, hWnd) {
 		if (ErrorLevel = 0) {
 			next = %temp%\vsciconrot_next.ico
 			change_icon(hWnd, next)
+			FileDelete, %next%
 		}
 	}
 }
