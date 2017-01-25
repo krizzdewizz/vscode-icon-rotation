@@ -41,6 +41,9 @@ The common startup folder can be opened by running `shell:common startup`.
 
 ## Release Info
 
+v1.0.3
+- Sorry, build did not pick up new binaries from 1.0.2.
+
 v1.0.2
 - Delete temp. icon file after it has been applied, so that VS Code default icon is shown again for new windows.
 
